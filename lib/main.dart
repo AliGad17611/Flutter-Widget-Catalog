@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_catalog/segmented_buttons.dart';
+import 'package:flutter_widget_catalog/badge_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,20 +23,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Spacer(),
-              Text('Single choice'),
-              SingleChoice(),
-              SizedBox(height: 20),
-              Text('Multiple choice'),
-              MultipleChoice(),
-              Spacer(),
-            ],
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Spacer(),
+            TextBadge(),
+            SizedBox(height: 20),
+            CountBadge(),
+            Spacer(),
+          ],
         ),
+      ),
     );
   }
 }
