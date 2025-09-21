@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_catalog/button_types_group.dart';
+import 'package:flutter_widget_catalog/segmented_buttons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Widget Catalog',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
     );
@@ -22,16 +23,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Padding(
-        padding: EdgeInsets.all(4.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ButtonTypesGroup(enabled: true),
-            ButtonTypesGroup(enabled: false),
-          ],
+      body:Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Spacer(),
+              Text('Single choice'),
+              SingleChoice(),
+              SizedBox(height: 20),
+              Text('Multiple choice'),
+              MultipleChoice(),
+              Spacer(),
+            ],
+          ),
         ),
-      ),
     );
   }
 }
