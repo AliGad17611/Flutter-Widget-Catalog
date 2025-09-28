@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_catalog/badge_widget.dart';
+import 'package:flutter_widget_catalog/badge/badge_example.dart';
+import 'package:flutter_widget_catalog/badge/badge_widget.dart';
+import 'package:flutter_widget_catalog/linear_progress_indicator/linear_progress_indicator_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,16 +26,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Spacer(),
-            TextBadge(),
-            SizedBox(height: 20),
-            CountBadge(),
-            Spacer(),
-          ],
-        ),
+        child: LinearProgressIndicatorExample(),
       ),
     );
   }
